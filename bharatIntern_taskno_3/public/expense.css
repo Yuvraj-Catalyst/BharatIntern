@@ -1,0 +1,42 @@
+
+#form{
+    position: absolute;
+    top:19%;
+    left:40vw;
+    width:25%;
+    height:54%;
+    background-color: white;
+}
+body{
+    background-color: red;
+}
+
+.line1{
+    text-align: center;
+    position:relative;
+    top:10%;
+    font-size:3vh;
+}
+.line2{
+    text-align: center;
+    position:relative;
+    top:10%;
+    font-size:4.5vh;
+}
+
+.input{
+    position: relative;
+    top:3em;
+    width:80%;
+    height:2em;
+    font-size:3vh;
+    margin-bottom:2%;
+    font-weight: bolder;
+    border-radius:5%;
+}
+
+.color{
+    background-color: red;
+    color:white;
+    font-weight: lighter;
+}

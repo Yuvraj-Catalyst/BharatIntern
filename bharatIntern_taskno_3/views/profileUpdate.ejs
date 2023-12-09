@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker WebApp</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/expense.css">
+
+</head>
+
+<body style="background-color: green;">
+    <nav>
+        <ul class="navbar">
+            <a class="link link1 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login">Back</a>
+            <a class="link link2 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/expenseList">Expenses
+                List</a>
+            <a class="link link2 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/incomeList">Income List</a>
+            <a class="link link3 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/dashboards"
+                style="color:orange;border-color: orange;">Dashboard</a>
+            <a class="link link3 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/profileUpdate"
+                style="color:blue;border-color: blue;">Profile</a>
+            <a class="link link7 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/income">New Income</a>
+            <a class="link link5 anchor" href="/id=<%= login.id %>/<%= login.userType %>-login/expense"
+                style="background-color: red; border-color: red;">New Expense</a>
+            <a class="link link6 anchor" href="/" style="background-color:yellow;color:black">Logout</a>
+        </ul>
+    </nav>
+    <div id="form">
+        <p class="line1">Update Profile</p>
+        <p class="line2">Hi,<%= login.fname %> Do you want to update your profile</p>
+        <form method="post" action="/id=<%= login.id %>/<%= login.userType %>-login/profileUpdate/submit?_method=patch"><center><input type="text" name="fname" value="<%= login.fname %>" required class="input"></center>
+        <center><input type="text" name="lname" value="<%= login.lname %>" class="input"></center>
+        <center><input type="email" name="email" readonly value="<%= login.email %>" class="input"></center>
+        <center><input type="submit" value="Update" class="input color"
+                style="background-color:yellow;border-color: yellow;color:black; width:30%;"></center></form>
+    </div>
+</body>
+
+</html>

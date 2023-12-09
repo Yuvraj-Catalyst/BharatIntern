@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker WebApp</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/expenselist.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <a class="link link1 anchor" href="/id=<%= login.id %>/<%= login.user %>-login">Back</a>
+            <a class="link link2 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/expenseList">Expenses
+                List</a>
+            <a class="link link2 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/incomeList">Income List</a>
+            <a class="link link3 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/dashboards"
+                style="color:orange;border-color: orange;">Dashboard</a>
+            <a class="link link3 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/profileUpdate"
+                style="color:blue;border-color: blue;">Profile</a>
+            <a class="link link7 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/income">New Income</a>
+            <a class="link link5 anchor" href="/id=<%= login.id %>/<%= login.user %>-login/expense"
+                style="background-color: red; border-color: red;">New Expense</a>
+            <a class="link link6 anchor" href="/" style="background-color:yellow;color:black">Logout</a>
+        </ul>
+    </nav>
+    <div id="container">
+        <h1>Recent Expense transactions</h1>
+        <p>Below is the history of your expense transactions records</p>
+        <a href="/id=<%= login.id %>/<%= login.user %>-login/expense" style="background-color: red;" class="expensebtn">New Expenses</a>
+        <div id="title" class="color row grid1">
+            <div>TITLE</div>
+            <div>DESCRIPTION</div>
+            <div>AMOUNT</div>
+            <div>DATE</div>
+        </div>
+        <% if(expenses.length == 0){ %>
+            <h1 style="position:relative;top:5vh;">No Expense Found</h1>
+        <% } %>
+        <% for(let expense of expenses){ %>
+        <div class="row grid1">
+            <div><%= expense.title %></div>
+            <div><%= expense.description %></div>
+            <div><%= expense.amount %></div>
+            <div><%= expense.recordDate %></div>
+        </div>
+        <% }%>
+    </div>
+</body>
+
+</html>

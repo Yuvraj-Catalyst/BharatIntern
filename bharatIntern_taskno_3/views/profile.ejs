@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker WebApp</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/profile.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <a class="link link1 anchor" href="/">Back</a>
+            <a class="link link2 anchor" href="/id=<%= loginData._id%>/<%= loginData.userType %>-login/expenseList">Expenses List</a>
+            <a class="link link2 anchor" href="/id=<%= loginData._id%>/<%= loginData.userType %>-login/incomeList">Income List</a>
+            <a class="link link3 anchor" href="/id=<%= loginData._id%>/<%= loginData.userType %>-login/dashboards" style="color:orange;border-color: orange;">Dashboard</a>
+            <a class="link link3 anchor" href= "/id=<%= loginData._id%>/<%= loginData.userType %>-login/profileUpdate" style="color:blue;border-color: blue;">Profile</a>
+            <a class="link link7 anchor" href="/id=<%= loginData._id%>/<%= loginData.userType %>-login/income">New Income</a>
+            <a class="link link5 anchor" href="/id=<%= loginData._id%>/<%= loginData.userType%>-login/expense" style="background-color: red; border-color: red;">New Expense</a>
+            <a class="link link6 anchor" href="/" style="background-color:yellow;color:black">Logout</a>
+        </ul>
+    </nav>
+    <div id="container">
+        <div class="row">
+            <div class="part1">
+                <img src="/profileImage.jpg" class="image part1_1">
+                <div class="part1_2">
+                    <p class="part1_2_1"><%= loginData.fname %>&nbsp<%= loginData.lname %>&nbsp&nbsp</p>
+                    <p class="part1_2_2"> <%= allData.expenseCount+allData.incomeCount %>&nbspRecords Created</p>
+                    <p class="part1_2_3"><%= loginData.email %></p>
+                    <p class="part1_2_4">Date Joined:&nbsp<%= loginData.createDate %></p>
+                    <p class="part1_2_5">Edit Profile</p>
+                    <a href="#" class="part1_2_6" ><img class="image1" src="/pen.jpg"></a>
+                </div>
+            </div>
+            <div class="part2"></div>
+            <div class="part3">
+                <h1 class="part3_h1">Expenses</h1>
+                <h1 class="part3_h2">&#8377 <%= allData.expenseMoney.toLocaleString("en-IN")%>.00</h1>
+                <p class="part3_p">Number of Transactions <%= allData.expenseCount %></p>
+                <p class="part3_p">Minimum Transactions &#8377 <%= allData.expenseMin %></p>
+                <p class="part3_p">Maximum Transactions &#8377 <%= allData.expenseMax %></p>
+                <p class="part3_p">Average Transactions &#8377 <%= allData.expenseAvg %></p>
+            </div>
+            <div class="part4">
+                <h1 class="part3_h1">Income Transactions</h1>
+                <h1 class="part3_h2">&#8377 <%= allData.incomeMoney.toLocaleString("en-IN")%>.00</h1>
+                <p class="part3_p">Number of Transactions <%= allData.incomeCount %></p>
+                <p class="part3_p">Minimum Transactions &#8377 <%= allData.incomeMin %></p>
+                <p class="part3_p">Maximum Transactions &#8377 <%= allData.incomeMax %></p>
+                <p class="part3_p">Average Transactions &#8377 <%= allData.incomeAvg %></p>
+            </div>
+            <a href="#" class="part3_btn">View Expenses History</a>
+            <a href="#" class="part4_btn">View Income History</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

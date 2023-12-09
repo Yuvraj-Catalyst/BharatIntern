@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker WebApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <a href="/" class="anchor link link1">Back</a>
+            <a href="/" class="anchor link link2">Home</a>
+            <a href="" class="anchor link link3">New Expense</a>
+            <a href="" class="anchor link link4">New Income</a>
+            <a href="/signin" class="anchor link link5">Sign In</a>
+            <a href="/signup" class="anchor link link6">Sign Up</a>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="part1">
+            <div class="heading">Keep Track Of Your Income and expenses flow</div>
+            <div id="signin">
+                <p class="line1">Sign In</p>
+                <h1 class="line2">Login to your account</h1>
+                <form method="post" action="/signin/submit">
+                <center><input type="email" name="email" value="yuvraj@gmail.com" required placeholder="E-Mail" class="input"></center>
+                <center><input type="password" name="password" value="yuvraj" required placeholder="Password" class="input"></center>
+                <center><input type="submit" value="Login" class="input color"></center></form>
+            </div>
+        </div>
+        <div id="part2"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.errorImage{
+    width:60vw;
+    height:60vh;
+    position: relative;
+    top:2vh;
+    left:20vw;
+    background-image: url("errorImage.jpg");
+    background-size: contain;
+}
+.errormessage{
+    text-align: center;
+    color:red;
+    font-size:5vh;
+    position: relative;
+    top:3vh;
+}

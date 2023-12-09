@@ -1,0 +1,35 @@
+#container{
+    display:flex;
+    width:100%;
+}
+#part1{
+    width:50%;
+    height:88vh;
+}
+#part2{
+    width:50%;
+    padding-left:5%;
+}
+.heading{
+    margin-top:8%;
+    width: 60%;
+    font-size:8vh;
+    font-weight: bolder;
+}
+.line1{
+    margin-top:8%;
+    width: 60%;
+    font-size:3vh;
+}
+.ac{
+    margin-top:8%;
+    width: 60%;
+    font-size:6vh;
+    color:red;
+    font-weight: bolder;
+}
+.acdata{
+    width: 60%;
+    font-size:3vh;
+    line-height: 2;
+}

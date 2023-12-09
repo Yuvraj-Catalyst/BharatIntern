@@ -1,0 +1,40 @@
+#container{
+    margin:0% 1%;
+    width:98%;
+    height:87vh;
+}
+.expensebtn{
+    color: white;
+    border: 1px solid red;
+    text-decoration: none;
+    position: relative;
+    top: 3%;
+    margin-left: 1%;
+    padding: 0.5%;
+    font-size: 3vh;
+    font-weight: 500;
+    border-radius: 7%
+}
+.grid1{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.grid2{
+    display:grid;
+    grid-template-columns: 25% 20% 30% 10% 15%;
+}
+.row{
+    position: relative;
+    top:5.5%;
+    height:8%;
+    align-items: center;
+    border:0.5px solid gray;
+    padding-left:0.5%;
+    font-size:3vh;
+    font-weight:400;
+}
+.color{
+    background-color:gray;
+    border-bottom: 3px solid black;
+    padding:0vh 2vw;
+}
