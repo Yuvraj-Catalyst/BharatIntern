@@ -1,0 +1,57 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.cards{
+    position:absolute;
+    border:1px solid black;
+    top:12vh;
+    left:40vw;
+    width:23vw;
+    height:50vh;
+    background-color:aqua;
+}
+.navi{
+    display:flex;
+    list-style:none;
+    width:100%;
+    height:10vh;
+    background-color: gray;
+}
+.li{
+    padding:3vh 3vw 0vh 3vw;
+    font-size:2vw;
+}
+.anchor{
+    text-decoration: none;
+    color:black;
+}
+.size{
+    font-size:3vh;
+    font-style:italic;
+}
+.heading{
+    margin-top:2vh;
+    font-size:5vh;
+    text-align:center;
+    color:red;
+}
+.center{
+    text-align:center;
+}
+#password,#username,#confirmpassword{
+    width:20vw;
+    margin-left:1.5vw;
+}
+#error{
+    border:1px solid black;
+    width:70vw;
+    height:10vh;
+    position: relative;
+    left:15vw;
+    top:10vh;
+    color:red;
+    background-color: aqua;
+    text-align: center;
+    font-size:6vh;
+}

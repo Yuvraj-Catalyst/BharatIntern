@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#heading{
+    font-size:5vh;
+    position: relative;
+    top:2vh;
+    text-align:center;
+}
+#update{
+    width:80vw;
+    position: relative;
+    left:10vw;
+    top:5vh;
+}
+.updateTitle{
+    width:95%;
+    height:7vh;
+    font-size:2.5vh;
+    font-style:italic;
+    border:1px solid red;
+}
+.updateContent{
+    width:95%;
+    height:40vh;
+    font-size:3vh;
+}
+.link{
+    text-decoration: none;
+    color: purple;
+    font-size:4vh;
+}
+.flex{
+    display: flex;
+    margin-top:3vh;
+}
+.flex_right{
+    display: inline-block;
+    float:right;
+    margin-right:4.2vw;
+    margin-top:1.5vh;
+}
+.flex_left{
+    display: inline-block;
+    float:left;
+    margin-left:1.2vw;
+    margin-top:1.5vh;
+}

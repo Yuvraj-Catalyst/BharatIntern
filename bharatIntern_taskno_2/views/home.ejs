@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="navi">
+                <li class="li"><a href="/" class="anchor" id="home">Home</a></li>
+                <li class="li"><a href="/signup" class="anchor">SignUp</a></li>
+                <li class="li"><a href="/login" class="anchor">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 id="websiteHeading">Welcome To Blog Website</h1>
+    <div class="flex card_layout">
+        <% for(let post of posts){ %>
+            <div class="card">
+                
+                <div class="flex_left">@<%= post.username.slice(0,post.username.indexOf('@')) %></div>
+                <div class="flex_right"><%= post.postDate %></div>
+                
+                <b>
+                    <div class="title">TITLE</div>
+                </b>
+                <hr>
+                <div class="content"><%= post.title %>
+                </div>
+                <div class="card_layout">
+                    <a href="/post_id=<%= post.id %>" class="link" style="position:relative;margin-left:40%;">Read More</a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </body>
+    </html>

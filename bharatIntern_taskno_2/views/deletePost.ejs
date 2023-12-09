@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/update.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+
+    <div id="update">
+        <b>
+            <div id="heading">Delete Post</div>
+        </b><br>
+        <form method="post" action="/login/id=<%= post.user_id %>/Delete/post.id=<%= post.id %>/submit?_method=delete">
+            <p style="font-size:3vh;"><b>Title</b></p>
+            <input type="text" name="title" class="updateTitle" value="<%= post.title %>" readonly><br><br>
+            <p style="font-size:3vh;"><b>Content</b></p>
+            <textarea class="updateContent" name="content" readonly><%= post.content %></textarea>
+            <a href="/login/id=<%= post.user_id %>/home" class="link flex_left">BACK</a>
+            <input type="submit" value="DELETE" class="link flex_right">
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/update.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <ul class="navi">
+                <li class="li"><a href="/login/id=<%= id.id %>/home" class="anchor">Home</li>
+                <li class="li"><a href="/login/id=<%= id.id %>/newPost" class="anchor">New</li>
+                <li class="li"><a href="/" class="anchor">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="update">
+        <b>
+            <div id="heading">Edit Post</div>
+        </b><br>
+        <form method="post" action="/login/id=<%= id.id %>/newPost_submit">
+        <p style="font-size:3vh;"><b>Title</b></p>
+        <input type="text" name="title" class="updateTitle" placeholder="Write Your Title in 60-120 characters" required minlength=60 maxlength=120><br><br>
+        <p style="font-size:3vh;"><b>Content</b></p>
+        <textarea class="updateContent" name="content" minlenght="100" required placeholder="Write Atleast 15 characters"></textarea>
+        <div><a href="/login/id=<%= id.id %>/home" class="link flex_left">BACK</a>
+            <input type="submit" value="POST" class="link flex_right"></form>
+            <!-- <a href="/login/id=<%= id.id %>/newPost_submit" class="link flex_right">POST</a> -->
+        </div>
+    </div>
+</body>
+</html>
