@@ -1,0 +1,71 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#body{
+    background-color: white;
+    margin-left:10vw;
+    width:80vw;
+    height:110vh;
+}
+body{
+    background-color: red;
+}
+#formBody{
+    position:relative;
+    top:4vh;
+    margin:0vh 2vw;
+}
+.date{
+    display:inline-block;
+    position: relative;
+    left:45vw;
+}
+.uid{
+    display:inline-block;
+    position: relative;
+    left:2vw;
+}
+#twoTag{
+    display: grid;
+    grid-template-columns: 15vw 45vw;
+    padding-bottom:1vh;
+
+}
+.size{
+    font-size:3vh;
+    font-style:bold italic;
+}
+#fourTag{
+    display:grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    padding-bottom:1vh;
+}
+#newfourTag{
+    display:grid;
+    grid-template-columns: 15vw 20vw 20vw 20vw;
+    padding-bottom:1vh;
+}
+.firstdata{
+    width:15vw;
+}
+.seconddata{
+    width:29vw;
+
+}
+.thirddata{
+    width:15vw;
+    text-align:center;
+}
+.forthdata{
+    width:15vw;
+    text-align:center;
+}
+#image{
+    display:inline-block;
+    width:15vw;
+    height:25vh;
+    border:1px solid black;
+    float:right;
+
+}

@@ -1,0 +1,56 @@
+*{
+    margin:0px;
+    padding:0px;
+ }
+ #body{
+     background-color: purple;
+     margin-left:10vw;
+     width:80vw;
+     height:160vh;
+ }
+ body{
+     background-color: red;
+ }
+ #heading1,#heading2{
+     text-align:center;
+ }
+ #heading1{
+     padding-top:1vh;
+     padding-bottom:1vh;
+ }
+ #image{
+     padding-top:5vh;
+     padding-left:15vw;
+     display:grid;
+     grid-template-columns: 20vw 30vw 20vw;
+     align-items: center;
+ }
+ #imageDiv{
+     height:5vw;
+     width:18vw;
+     border:0.5vh Solid black;
+     border-radius: 1vh;
+ }
+ .size{
+     font-size:3vh;
+     font-style:bold italic;
+ }
+ #formBody{
+     position:relative;
+     top:4vh;
+     margin:0vh 2vw;
+     color:white;
+ }
+ .inputTag{
+     display:grid;
+     grid-template-columns:20vw 20vw 20vw;
+     align-items: center;
+     margin-bottom: 2vh;
+ }
+ #drawing,#dancing,#sketching,#male,#female,#others,#bca,#bcom,#ba,#bsc{
+     width:2vw;
+     height:3vh;
+     position: relative;
+     top:0.7vh;
+ }
+ 

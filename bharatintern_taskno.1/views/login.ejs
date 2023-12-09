@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC College</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="navi">
+                <li class="li"><a href="http://localhost:3000" class="anchor">Home</a></li>
+                <li class="li"><a href="http://localhost:3000/signup" class="anchor">SignUp</a></li>
+                <li class="li"><a href="http://localhost:3000/login" class="anchor">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card">
+        <form method="post" action="/login_submit">
+            <p class="heading">Login</p>
+            <hr style="background-color:red;">
+            <br><br>
+            <label for="username" class="size center"><p>USERNAME</p></label>
+    
+            <input type="text" id="username" name="username" required class="size">
+            <br><br>
+            <label for="password" class="size center"><p>PASSWORD</p></label>
+     
+            <input type="password" id="password" name = "password" required class="size">
+            <br><br>
+            <label for="confirmpassword"  class="size center"><p>CONFIRM PASSWORD</p></label>
+            <input type="password" id="confirmpassword" required class="size">
+            <br><br>
+            <center><input type="submit" onclick="validate()" value = "SUBMIT" class="size"></center>
+        </form>
+    </div>
+</body>
+    <script>
+        let password = document.getElementById("password");
+        let confirmpassword = document.getElementById("confirmpassword");
+        function validate(){
+            let pass = password.value;
+            let cPass = confirmpassword.value;
+            if(pass.length == 0){
+                return;
+            }
+            if(cPass.length == 0){
+                return;
+            }
+            if(password.value != confirmpassword.value){
+            alert("Password and Confirm Password are different");
+            password.value="";
+            confirmpassword.value="";
+            return;
+            }
+        }
+        
+    </script>
+</html>

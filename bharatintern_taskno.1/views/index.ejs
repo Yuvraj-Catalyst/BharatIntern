@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/home.css" />
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="navi">
+                <li class="li"><a href="http://localhost:3000/login/<%= id.id %>/home" class="anchor">Home</li>
+                <li class="li"><a href="http://localhost:3000/login/<%= id.id %>/registration"
+                        class="anchor">Registration</a></li>
+                <li class="li"><a href="http://localhost:3000/" class="anchor">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="body">
+        <h1 id="heading1">ABC College/School</h1>
+        <h2 id="heading2"><u>Student Registration Form</u></h2>
+        <div id="formBody">
+            <form method="post" action="http://localhost:3000/login/<%= id.id %>/registration/submit">
+                <div class="inputTag">
+                    <label for="sName" class="size">STUDENT NAME</label>
+                    <input type="text" id="sName" name="sName" class="size" maxlength="30" required>
+                    <p>(max 30 characters a-z and A-Z)</p>
+                </div>
+                <div class="inputTag">
+                    <label for="fName" class="size">FATHER's NAME</label>
+                    <input type="text" id="fName" name="fName" class="size" maxlength="30" required>
+                    <p>(max 30 characters a-z and A-Z)</p>
+                </div>
+                <div class="inputTag">
+                    <label for="mName" class="size">MOTHER's NAME</label>
+                    <input type="text" id="mName" name="mName" class="size" maxlength="30" required>
+                    <p>(max 30 characters a-z and A-Z)</p>
+                </div>
+                <div class="inputTag">
+                    <label for="dob" class="size">DATE OF BIRTH</label>
+                    <input type="date" id="dob" name="dob" class="size" min="2002-01-01" max="2005-12-31" required>
+                </div>
+                <div class="inputTag">
+                    <label for="email" class="size">EMAIL ID</label>
+                    <input type="text" id="email" name="email" class="size" required>
+                </div>
+                <div class="inputTag">
+                    <label for="mobile" class="size">MOBILE NUMBER</label>
+                    <input type="text" id="mobile" name="mobile" class="size" pattern="[0-9]{10}" required>
+                    <p>(10 digit number)</p>
+
+                </div>
+                <div class="inputTag">
+                    <label for="aadhar" class="size">AADHAR</label>
+                    <input type="text" id="aadhar" name="aadhar" class="size" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                        placeholder="XXXX-XXXX-XXXX">
+                </div>
+
+                <div class="inputTag">
+                    <p class="size">GENDER</p>
+                    <div>
+                        <label for="male" class="size">Male</label>
+                        <input type="radio" id="male" name="gender" class="size" value="male">&nbsp&nbsp&nbsp&nbsp
+                        <label for="female" class="size">Female</label>
+                        <input type="radio" id="female" name="gender" class="size" value="female">
+                    </div>
+                </div>
+                <div class="inputTag">
+                    <label for="address" class="size">ADDRESS</label>
+                    <textarea rows="4" id="address" name="address" class="size"
+                        placeholder="Write Your Address required" style="width: 28vw;"></textarea>
+                </div>
+                <div class="inputTag">
+                    <label for="religion" class="size">RELIGION</label>
+                    <select id="religion" class="size" name="religion">
+                        <option value="Hindu">Hindu</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Sikh">Sikh</option>
+                        <option value="Christans">Christans</option>
+                    </select>
+                </div>
+                <div class="inputTag">
+                    <label for="state" class="size">State</label>
+                    <input type="text" id="state" name="state" class="size" maxlength="30" required>
+                    <p>(max 30 characters a-z and A-Z)</p>
+                </div>
+                <div class="inputTag">
+                    <p class="size">HOBBIES</p>
+                    <div style="width: 30vw;">
+                        <label for="drawing" class="size">Drawing</label>
+                        <input type="checkbox" id="drawing" name="hobby" value="Drawing">&nbsp&nbsp&nbsp
+                        <label for="dancing" class="size">Dancing</label>
+                        <input type="checkbox" id="dancing" value="Dancing" name="hobby">&nbsp&nbsp&nbsp
+                        <label for="sketching" class="size">Sketching</label>
+                        <input type="checkbox" id="sketching" value="Sketching" name="hobby">&nbsp&nbsp&nbsp<br><br>
+                        <label for="others" class="size">Others</label>
+                        <input type="checkbox" id="others" value="">&nbsp&nbsp&nbsp
+                        <input type="text" class="size" placeholder="Write Your Hobby" value=""
+                            name="hobby">&nbsp&nbsp&nbsp
+                    </div>
+                </div>
+                <div class="inputTag">
+                    <p class="size">QUALIFICATION</p>
+                    <div class="size" style=" width:50vw;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <center>Sl.No.</center>
+                                    </th>
+                                    <th style="padding:0vw 1vw;">
+                                        <center>Examination</center>
+                                    </th>
+                                    <th>
+                                        <center>Board</center>
+                                    </th>
+                                    <th>
+                                        <center>Percentage</center>
+                                    </th>
+                                    <th>
+                                        <center>Year of Passing</center>
+                                    </th>
+                                </tr>
+                            </thead><br>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <center>1</center>
+                                    </td>
+                                    <td style="padding:0vw 1vw;">Class X</td>
+                                    <td><input type="text" name="boardName" class="size" size="10"></td>
+                                    <td><input type="text" name="boardPercentage" class="size" size="10"></td>
+                                    <td><input type="text" name="boardYear" class="size" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <center>2</center>
+                                    </td>
+                                    <td style="padding:0vw 1vw;">Class XII</td>
+                                    <td><input type="text" name="intermediateName" class="size" size="10"></td>
+                                    <td><input type="text" name="intermediatePercentage" class="size" size="10"></td>
+                                    <td><input type="text" name="intermediateYear" class="size" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <center>3</center>
+                                    </td>
+                                    <td style="padding:0vw 1vw;">Graduation</td>
+                                    <td><input type="text" name="graduationName" class="size" size="10"></td>
+                                    <td><input type="text" name="graduationPercentage" class="size" size="10"></td>
+                                    <td><input type="text" name="graduationYear" class="size" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <center>4</center>
+                                    </td>
+                                    <td style="padding:0vw 1vw;">Masters</td>
+                                    <td><input type="text" name="masterName" class="size" size="10"></td>
+                                    <td><input type="text" name="masterPercentage" class="size" size="10"></td>
+                                    <td><input type="text" name="masterYear" class="size" size="10"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p CLASS="size">COURSES</p>
+                <div class="inputTag">
+                    <p CLASS="size">APPLIED FOR</p>
+                    <div>
+                        <label for="bca" class="size">BCA</label>
+                        <input type="radio" id="bca" name="courses" class="size" value="BCA">&nbsp&nbsp&nbsp
+                        <label for="bcom" class="size">B.Com</label>
+                        <input type="radio" id="bcom" name="courses" class="size" value="B.COM">&nbsp&nbsp&nbsp
+                        <label for="bsc" class="size">B.Sc</label>
+                        <input type="radio" id="bsc" name="courses" class="size" value="B.SC">&nbsp&nbsp&nbsp
+                        <label for="ba" class="size">B.A</label>
+                        <input type="radio" id="ba" name="courses" class="size" value="B.A">&nbsp&nbsp&nbsp
+                    </div>
+                </div>
+                <div class="inputTag">
+                    <div class="size">Student Image :</div>
+                    <input type="text" class="size" name="image" placeholder="Enter the path of Image">
+                    <div class="size" style="padding-left:5vw;width:25vw;">(less than 5 Mb and jpg,jpeg,png format)
+                    </div>
+                </div>
+                <input type="reset" value="Reset" class="size" style="position: relative;left:35vw;">
+                <input type="submit" value="Submit" class="size" style="position: relative;left:35vw;">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

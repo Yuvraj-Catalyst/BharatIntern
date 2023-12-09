@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered</title>
+    <link rel="stylesheet" href="/registration.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="navi">
+                <li class="li"><a href="http://localhost:3000/login/<%= detail.id %>/home" class="anchor">Home</li>
+                <li class="li"><a href="http://localhost:3000/login/<%= detail.id %>/registration"
+                        class="anchor">Registration</a></li>
+                <li class="li"><a href="http://localhost:3000/" class="anchor">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="body">
+        <h1>
+            <CENTER>ABC COLLEGE/SCHOOL</CENTER>
+        </h1>
+        <h3>
+            <CENTER>Registration Form Detail</CENTER>
+        </h3>
+        <h4>
+            <CENTER>SESSION 2023-2024</CENTER>
+        </h4><br>
+        <div>
+            <p class="uid">UID: <%= detail.id %>
+            </p>
+            <p class="date">Apply Date:<%= detail.applyDate%>
+            </p>
+        </div>
+        <br>
+        <div id="formBody">
+            <form>
+                <img src="<%=detail.image%>" id="image">
+                    <div id="twoTag">
+                        <div class="size">Candidate Name:</div>
+                        <input type="text" value="<%=detail.sName%>" class="size" readonly>
+                    </div>
+                    <div id="twoTag">
+                        <div class="size">Father's Name:</div>
+                        <input type="text" value="<%=detail.fName%>" class="size" readonly>
+                    </div>
+                    <div id="twoTag">
+                        <div class="size">Mother's Name:</div>
+                        <input type="text" value="<%=detail.mName%>" class="size" readonly>
+                    </div>
+                    <div id="fourTag">
+                        <div class="size">Date Of Birth:</div>
+                        <input type="text" value="<%=detail.dob%>" class="size" readonly>
+                        <div class="size" style="padding-left:5vw;">Gender:</div>
+                        <input type="text" value="<%=detail.gender%>" class="size" readonly>
+                    </div>
+                    <div id="fourTag">
+                        <div class="size">Religion:</div>
+                        <input type="text" value="<%=detail.religion%>" class="size" readonly>
+                        <div class="size" style="padding-left:5vw;">Aadhaar:</div>
+                        <input type="text" value="<%=detail.aadhar%>" class="size" readonly>
+                    </div>
+                    <div id="fourTag">
+                        <div class="size">State:</div>
+                        <input type="text" value="<%=detail.state%>" class="size" readonly>
+                        <div class="size" style="padding-left:5vw;">Courses:</div>
+                        <input type="text" value="<%=detail.courses%>" class="size" readonly>
+                    </div>
+                    <div id="twoTag">
+                        <div class="size">Hobbies:</div>
+                        <input type="text" value="<%=detail.hobby.join(',').replace(" on,","")%>" class="size" readonly>
+                    </div>
+                    <div id="twoTag">
+                        <div class="size">Address:</div>
+                        <textarea rows="5" class="size" style="width:30vw;"> <%=detail.address%></textarea>
+                    </div>
+                    <div id="newfourTag">
+                        <div class="size">Mobile:</div>
+                        <input type="text" value="<%=detail.mobile%>" class="size" readonly>
+                        <div class="size" style="padding-left:10vw;">Email:</div>
+                        <input type="text" value="<%=detail.email%>" class="size" readonly>
+                    </div><br>
+                    <p class="size">Qualifications</p>
+                    <table border="1px solid black">
+                        <thead>
+                            <tr>
+                                <th class="size firstdata">Examination</th>
+                                <th class="size seconddata">Board/University</th>
+                                <th class="size thirddata">Year</th>
+                                <th class="size forthdata">Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="size firstdata">Class X</td>
+                                <td class="size seconddata">
+                                    <%=detail.boardName%>
+                                </td>
+                                <td class="size thirddata">
+                                    <%=detail.boardYear%>
+                                </td>
+                                <td class="size forthdata">
+                                    <%=detail.boardPercentage%>%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="size firstdata">Class XII</td>
+                                <td class="size seconddata">
+                                    <%=detail.intermediateName%>
+                                </td>
+                                <td class="size thirddata">
+                                    <%=detail.intermediateYear%>
+                                </td>
+                                <td class="size forthdata">
+                                    <%=detail.intermediatePercentage%>%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="size firstdata">Graduation</td>
+                                <td class="size seconddata">
+                                   <%=detail.graduationName%>
+                                </td>
+                                <td class="size thirddata">
+                                    <%=detail.graduationYear%>
+"                                </td>
+                                <td class="size forthdata">
+                                    <%=detail.graduationPercentage%>%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="size firstdata">Masters</td>
+                                < <td class="size seconddata">
+                                    <%=detail.masterName%>
+                                        </td>
+                                        <td class="size thirddata">
+                                            <%=detail.masterYear%>
+                                        </td>
+                                        <td class="size forthdata">
+                                            <%=detail.masterPercentage%>%
+                                        </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
